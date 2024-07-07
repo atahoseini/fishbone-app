@@ -19,6 +19,7 @@ const App = () => {
     <div className="App">
       <header className="header">
         <h1>Order Register</h1>
+        <h1>Simple CRUD application</h1>
       </header>
       <main>
         <div></div>

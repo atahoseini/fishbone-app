@@ -19,11 +19,10 @@ const App = () => {
     <div className="App">
       <header className="header">
         <h1>Order Register</h1>
-        <h1>Simple CRUD application</h1>
       </header>
-      <main>
-        <div></div>
-         <div className="menu m-10">
+<main>
+          {/* <div>{activeComponent}</div> */}
+      <div className="menu m-10">
           <Button className="btn btn-light m-10 " onClick={() => setActiveComponent('order')}>Orders</Button>
           <Button className="btn btn-light m-10" onClick={() => setActiveComponent('users')}>Users</Button>
           <Button className="btn btn-light m-10" onClick={() => setActiveComponent('products')}>Products</Button>

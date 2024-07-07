@@ -19,7 +19,6 @@ const App = () => {
     <div className="App">
       <header className="header">
         <h1>Order Register</h1>
-        <h1>Simple CRUD application-FISH BONE TASK - NODE.JS + REACT TYPE SCRIPT</h1>
       </header>
       <main>
         <div></div>

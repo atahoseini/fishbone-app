@@ -11,8 +11,12 @@ interface User {
     lastName: string;
 }
 
-function UserList() {
-    const pageSize = 2;
+interface UserListProps {
+    refresh: boolean;  
+}
+
+function UserList({ refresh }: UserListProps) {
+    const pageSize = 5;
     const [users, setUsers] = useState<User[]>([]);
     const [page, setPage] = useState<number>(1);
     const [pageCount, setPageCount] = useState<number>(1);
@@ -35,7 +39,7 @@ function UserList() {
             .catch((error) => {
                 console.error("Error fetching users:", error);
             });
-    }, [page, API_BASE_URL]);
+    }, [page, API_BASE_URL, refresh]); // Add refresh to dependency array
 
     function handlePageChange(newPage: number) {
         setPage(newPage);

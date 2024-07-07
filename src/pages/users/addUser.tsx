@@ -4,9 +4,10 @@ import { Button, Toast } from "react-bootstrap";
 
 interface AddUserProps {
    onClose: () => void;
+   onUserAdded: () => void; 
 }
 
-function AddUser({ onClose }: AddUserProps) {
+function AddUser({ onClose, onUserAdded }: AddUserProps) {
    const userNameRef = useRef<HTMLInputElement | null>(null);
    const firstNameRef = useRef<HTMLInputElement | null>(null);
    const lastNameRef = useRef<HTMLInputElement | null>(null);
@@ -37,6 +38,7 @@ function AddUser({ onClose }: AddUserProps) {
             if (lastNameRef.current) lastNameRef.current.value = "";
             if (passwordRef.current) passwordRef.current.value = "";
             onClose();
+            onUserAdded(); // Trigger the user added callback
          })
          .catch((error) => {
             setMessage("Error adding user");

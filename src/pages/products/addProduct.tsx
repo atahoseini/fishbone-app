@@ -65,7 +65,7 @@ function AddProduct({ onClose }: AddProductProps) {
         <Row>
           <Col className="mb-3">
             <label htmlFor="productPrice" className="form-label">Price:</label>
-            <input type="number" className="form-control" id="productPrice" ref={productPriceRef} required />
+            <input type="text" className="form-control" id="productPrice" ref={productPriceRef} required />
           </Col>
           <Col className="mb-3">
             <label htmlFor="productStock" className="form-label">Stock:</label>
